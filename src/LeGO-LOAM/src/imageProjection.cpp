@@ -260,6 +260,9 @@ public:
 
             range = sqrt(thisPoint.x * thisPoint.x + thisPoint.y * thisPoint.y + thisPoint.z * thisPoint.z);
             rangeMat.at<float>(rowIdn, columnIdn) = range;
+            // rangeMat.resize
+            // cv::imshow("1",rangeMat/100);
+            // cv::waitKey(0);
 
 			// columnIdn:[0,H] (H:Horizon_SCAN)==>[0,1800]
             thisPoint.intensity = (float)rowIdn + (float)columnIdn / 10000.0;
